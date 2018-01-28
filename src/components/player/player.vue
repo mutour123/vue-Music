@@ -95,8 +95,10 @@
       </div>
     </transition>
     <playlist ref="playlist"></playlist>
-    <audio ref="audio" :src="currentSong.url" @play="ready" @error="error" @timeupdate="updateTime"
-           @ended="end"></audio>
+
+    <!--<audio ref="audio" :src="currentSong.url" @play="ready" @canplay="ready" @error="error" @timeupdate="updateTime" @ended="end"></audio>-->
+    <audio ref="audio" src="../../../static/1.mp3" @play="ready" @error="error" @timeupdate="updateTime" @ended="end"></audio>
+
   </div>
 </template>
 

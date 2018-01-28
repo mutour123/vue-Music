@@ -26,6 +26,9 @@
     created() {
       this._getSingerList()
     },
+    mounted() {
+      console.log('fds')
+    },
     methods: {
       handlePlaylist(playlist) {
         const bottom = playlist.length > 0 ? '60px' : ''
@@ -41,7 +44,10 @@
       _getSingerList() {
         getSingerList().then((res) => {
           if (res.code === ERR_OK) {
+            console.log(res.data)
             this.singers = this._normalizeSinger(res.data.list)
+            console.log(111111)
+            console.log(this.singers)
           }
         })
       },
